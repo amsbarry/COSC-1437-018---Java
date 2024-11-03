@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.util.Random;
+public class App {
+    public static void main(String[] args) throws Exception {
+
+/*
+ * Developer: Amadou Barry
+ * Lab: Module One Lab 1
+ * Date: October 26, 2024
+ * Purpose: this program will take 2 integer inputs 
+ *          from a user and generate a random number between those integers. 
+ *          The random number generated can include the integers inputed by the user
+ * 
+ */
+// Declaring variables.
+        String name;
+        int randomNumber, lowerboundRange, upperboundRange;
+        
+// Explains the purpose of the program to the user.
+        System.out.println("Generate a random number between 2 Integers");
+
+// This is to get user input from the console.
+        Scanner input = new Scanner(System.in);
+
+// Prompts the user to type in their name.
+        System.out.print("What is your name: ");
+        name = input.nextLine();
+
+// Promts the user for the first integer in the range.
+        System.out.print("Enter first number in the range: ");
+        lowerboundRange = input.nextInt();
+
+// Promts the user for the second integer in the range.
+        System.out.print("Enter second number in the range: ");
+        upperboundRange = input.nextInt();
+
+// This will generate the random number.
+        Random rand = new Random();
+        randomNumber = rand.nextInt((upperboundRange - lowerboundRange) + 1) + lowerboundRange;
+
+// This will print out the output to the user.
+        System.out.println("Name: " + name);
+        System.out.println("Your random number is: " +randomNumber);
+
+
+    }
+}
